@@ -1,0 +1,83 @@
+.library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    // we can also use height: 100vh
+    // since position: fixed makes it relative to the root element i.e. html tag
+    // since it's parent div - app is not having position: relative
+    height: 100%;
+    overflow: scroll;
+    box-shadow: 2px 2px 50px rgb(204, 204, 204); 
+    background: white;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
+    h2 {
+        padding: 2rem;
+    }
+}
+
+.library-song {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    img {
+        width: 30%;
+    }
+    &:hover{
+        background: rgb(238, 246, 255);
+    }
+    
+}
+
+.song-description {
+    padding-left: 1rem;
+    h3 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 0.7rem;
+    }
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+// Scrollbar styling 
+
+/* width */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+  /* Track */
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+  /* Handle */
+*::-webkit-scrollbar-thumb {
+    background: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+.selected {
+    background-color: rgb(221, 229, 240);
+}
+
+.active-library {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+    .library {
+        width: 100%;
+    }
+}

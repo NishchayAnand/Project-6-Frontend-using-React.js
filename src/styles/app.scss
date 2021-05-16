@@ -1,0 +1,33 @@
+@import "./song";
+@import "./player";
+@import "./library";
+@import "./nav.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h3, h4 {
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+h1, h2, h3 {
+    color: rgb(54, 54, 54);
+}
+
+.App {
+    transition: all 0.5s ease;
+}
+
+// Margin-left will make the 
+// screen size smaller when the library is active 
+.library-active {
+    margin-left: 30%;
+}
